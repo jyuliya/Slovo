@@ -4,12 +4,15 @@ import Foundation
 
 class ViewController: UIViewController {
     
-    @IBOutlet var Lbl: UILabel!
+   
+    @IBOutlet weak var Lbl: UILabel!
     
-    @IBOutlet var Rate: UILabel!
     @IBOutlet var Search: UISearchBar!
     
     @IBOutlet weak var Title2: UILabel!
+    
+    @IBOutlet weak var Rate: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getData()
@@ -18,10 +21,6 @@ class ViewController: UIViewController {
     
     func searchSearchButtonClicked(searchbar: UISearchBar) {
         //Lbl.text = Search.text
-        let json = try JSONSerialization.jsonObject(with: data) as AnyObject
-        let words = json["words"]
-        let value = words[Search.text]
-        print(value)
     }
     
     func getData() {
@@ -29,14 +28,14 @@ class ViewController: UIViewController {
         if let data = NSData(contentsOfFile: path!) as Data! {
             do {
                 let json = try JSONSerialization.jsonObject(with: data) as AnyObject
-            if let words = json["words"] as? NSDictionary {
-                print(words.allKeys)
-                Title2.text = "Топ слов: \n"
-                Rate.text =  words.allKeys[1] as? String
-            }
-            else {
-            print("not")
-            }
+                if let words = json["words"] as? NSDictionary {
+                    print(words.allKeys)
+                    Title2.text = "Топ слов: \n"
+                    Rate.text =  words.allKeys[1] as? String
+                }
+                else {
+                    print("not")
+                }
             }
             catch{
                 print("error")
