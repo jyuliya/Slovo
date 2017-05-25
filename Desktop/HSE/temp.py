@@ -1,13 +1,8 @@
-#!/usr/bin/env python
-#coding : utf8
-
 from bs4 import BeautifulSoup
 import requests
 
-import json
 
-
-for i in range (27, 28):
+for i in range (0, 32):
     if ((i == 26) | (i == 28)):
         continue
     a = hex(16*9+i)
@@ -33,39 +28,15 @@ for i in range (27, 28):
                         continue
                     with open('text.json', 'a') as file:
                         print()
-                        #print('"', title[counting], '" : {')
-                        #json.dump('"', file)
-                        #json.dump(title[counting], file)
-                        #json.dump('" : {', file)
-                        #file.close()
+                        print('"', title[counting], '" : {')
                     r1 = requests.get('http://slovonovo.ru' + elem1[1])
                     soup1 = BeautifulSoup(r1.text, 'html.parser')
-                    with open('text.json', 'a') as file:
-                        #print('"definition" : "', end = '')
-                        #json.dump('"definition" : "', file)
-                        file.close()
-                    for link1 in soup1.find_all('p'):
-                        if (link1.text[11:] != "Приходилось "):
-                            with open('text.json', 'a') as file:
-                                title1 = link1.text.split('\n')
-                                #if (len(title1) != link1.text.count('\n') + 1):
-                                    #print("bad")
-                                for elem in title1:
-                                    elem.replace('\r', '')
-                                    elem.replace('\\', '')
-                                    elem.strip('\r')
-                                    print(''.join(i for i in elem if ord(i)<128))
-                                    json.dump(json.dump(elem, file), file)
-                                    if (len(elem) > 2):
-                                        print()
-                                        #print(elem, end='')
-                                        #json.dump(elem, file)
-                            file.close()
-                    with open('text.json', 'a') as file:
-                        print()
-                        #print('"},')
-                        #json.dump('"},\n', file)
-                        file.close()
+                    print('\t"definition" : "', end = '')
+                    print(soup1('p')[3].text[22:], end = '')
+                    print('"},')
+                    print('\t"example" : "', end = '')
+                    print(soup1('p')[4].text, end= '')
+                    print('"},')
         if (soup.find('span') == None):
             count = 0
             stop = False
@@ -75,4 +46,3 @@ for i in range (27, 28):
             if ((c == "['arr', 'disabled']") & (link.text[2:] != "предыдущая")) :
                 stop = False
                 count = 0
-        
