@@ -17,6 +17,10 @@
 		D81313871E82A7E60088C2CD /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D81313861E82A7E60088C2CD /* Podfile */; };
 		D81313891E82A85A0088C2CD /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D81313881E82A85A0088C2CD /* SwiftyJSON.framework */; };
 		D813138B1E82A8820088C2CD /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = D813138A1E82A8820088C2CD /* data.json */; };
+		D82027921EE0904F00FD85B2 /* SecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82027911EE0904F00FD85B2 /* SecViewController.swift */; };
+		D82027941EE09DB900FD85B2 /* bgimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D82027931EE09DB900FD85B2 /* bgimage.jpg */; };
+		D82027961EE09F7C00FD85B2 /* backgr.png in Resources */ = {isa = PBXBuildFile; fileRef = D82027951EE09F7C00FD85B2 /* backgr.png */; };
+		D82027981EE0A1D000FD85B2 /* WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82027971EE0A1D000FD85B2 /* WordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		D81313861E82A7E60088C2CD /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		D81313881E82A85A0088C2CD /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../Library/Developer/Xcode/DerivedData/Project-bczeyrypwqrkpbbzychyxrccozil/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		D813138A1E82A8820088C2CD /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = data.json; path = ../../data.json; sourceTree = "<group>"; };
+		D82027911EE0904F00FD85B2 /* SecViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecViewController.swift; sourceTree = "<group>"; };
+		D82027931EE09DB900FD85B2 /* bgimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bgimage.jpg; path = ../../../../Downloads/bgimage.jpg; sourceTree = "<group>"; };
+		D82027951EE09F7C00FD85B2 /* backgr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backgr.png; path = ../../../../Downloads/backgr.png; sourceTree = "<group>"; };
+		D82027971EE0A1D000FD85B2 /* WordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordViewController.swift; sourceTree = "<group>"; };
 		E0249AC29E70D51D13D16BCE /* Pods_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7E601F13DDC70425EEB1F94 /* Pods-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project/Pods-Project.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,10 +97,14 @@
 		D81313701E82A7DB0088C2CD /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				D82027951EE09F7C00FD85B2 /* backgr.png */,
+				D82027931EE09DB900FD85B2 /* bgimage.jpg */,
 				D813138A1E82A8820088C2CD /* data.json */,
 				D81313711E82A7DB0088C2CD /* AppDelegate.swift */,
 				D81313731E82A7DB0088C2CD /* ViewController.swift */,
 				D81313751E82A7DB0088C2CD /* Main.storyboard */,
+				D82027971EE0A1D000FD85B2 /* WordViewController.swift */,
+				D82027911EE0904F00FD85B2 /* SecViewController.swift */,
 				D813137B1E82A7DB0088C2CD /* Assets.xcassets */,
 				D813137D1E82A7DB0088C2CD /* LaunchScreen.storyboard */,
 				D81313801E82A7DB0088C2CD /* Info.plist */,
@@ -168,7 +180,9 @@
 				D813137F1E82A7DB0088C2CD /* LaunchScreen.storyboard in Resources */,
 				D813137C1E82A7DB0088C2CD /* Assets.xcassets in Resources */,
 				D813138B1E82A8820088C2CD /* data.json in Resources */,
+				D82027941EE09DB900FD85B2 /* bgimage.jpg in Resources */,
 				D81313771E82A7DB0088C2CD /* Main.storyboard in Resources */,
+				D82027961EE09F7C00FD85B2 /* backgr.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,7 +241,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D82027921EE0904F00FD85B2 /* SecViewController.swift in Sources */,
 				D81313741E82A7DB0088C2CD /* ViewController.swift in Sources */,
+				D82027981EE0A1D000FD85B2 /* WordViewController.swift in Sources */,
 				D813137A1E82A7DB0088C2CD /* Project.xcdatamodeld in Sources */,
 				D81313721E82A7DB0088C2CD /* AppDelegate.swift in Sources */,
 			);
