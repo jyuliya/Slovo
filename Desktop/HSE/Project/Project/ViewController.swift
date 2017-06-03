@@ -7,6 +7,9 @@ class ViewController: UIViewController, SecViewControllerDelegate {
     
     @IBOutlet var Lbl: UILabel!
     
+    @IBAction func Exit(_ sender: UIButton) {
+        SYS_exit
+    }
    
     override func viewDidLoad() {
         super.viewDidLoad()

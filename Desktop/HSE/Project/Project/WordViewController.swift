@@ -18,9 +18,15 @@ class WordViewController: UIViewController {
     
     @IBOutlet weak var Word: UILabel!
     @IBOutlet weak var Def: UILabel!
+    
+    var labeltext = String()
+    var labeltext1 = String()
+    
     @IBAction func Return_b(_ sender: UIButton) {
     }
     override func viewDidLoad() {
+        Word.text = labeltext
+        Def.text = labeltext1
         super.viewDidLoad()
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "backgr.png")
